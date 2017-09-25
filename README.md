@@ -8,7 +8,11 @@ This archive contains sample input, keys, output and TWO testing
 scripts.  'test'.sh' performs encoding/decoding for each input and
 key using a variety of numbers of rounds. 
 
-The lab manual for this exercide is at: https://docs.google.com/a/d.umn.edu/document/d/1vCakfFST2wa7JtztmbSh033E7BIQngiYUAF7z3-Ry7I/edit?usp=sharing
+The lab manual for this exercise is at: https://docs.google.com/a/d.umn.edu/document/d/1vCakfFST2wa7JtztmbSh033E7BIQngiYUAF7z3-Ry7I/edit?usp=sharing
+
+You'll need to clone this repository, make sure it is NOT PUBLIC and share it with your TA and instructor. You can do that by following the instructions here:
+
+https://docs.google.com/a/d.umn.edu/document/d/1joI11SboCexWWEJRWLDaK-XoeeYIjlvYe9Hxj-0nONk/edit?usp=sharing
 
 The scripts test.sh and padtest.sh use the following directories:
 
