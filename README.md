@@ -13,6 +13,7 @@ The lab manual for this exercide is at: https://docs.google.com/a/d.umn.edu/docu
 The scripts test.sh and padtest.sh use the following directories:
 
 Contents:
+
 	input/		-- sample inputs
 	correct/	-- correctly encoded inputs
 	ENCODED/	-- YOUR encoder's output files are put here
