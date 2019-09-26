@@ -1,0 +1,31 @@
+Question 1: Why are the encrypted versions (lines 2 and 4) of gettysburg.txt so much harder to compress than the plaintext version (line 6)?
+
+A: Encrypted text files have near maximum entropy and doesn't have many redundancies that can be used to shorthen the length. The plain text has redundacies, for instance, repeated substrings. 
+
+Question 2: Why is the gettysburg.aes.gz larger than gettysburg.enc.gz, and even larger than gettysburg.aes? What does that suggest about the difference in entropy between AES's output and our product cipher's output?
+
+A: AES has a special encryption technique that makes the file to be secure. The encryption makes the file to have a higher entropy than the product cipher. 
+
+Using your product cipher and the files in product-vectors, encrypt the inputs 12_abe.jpg and 11_moby_dick.txt each with the keys 01_hexadecimal, 02_16_zeros, 03_16_Zs, and 04_16-random1. Then, compress the input files and the encrypted files using 'gzip -k filename' Compare the unencrypted, encrypted, and compressed file sizes. Using explicit examples (including quoting file sizes) from the files you just encrypted and/or compressed, answer the following questions:
+
+
+
+Question 3: Does the encrypted file size depend on the key used? Why or why not?
+
+A:No, the encrypted files size doesn't depend on the key used. The encrypted files stayed at the same size which was '496'
+
+Question 4: Does the encrypted-and-compressed file size depend on the key used? Why or why not?
+
+A:No, the encrypted-and-compressed files size doesn't depend on the key used. The encrypted-and-compressed files stayed at the same size which was '492'
+
+Question 5: Does the ratio of the encrypted-and-compressed file size vs. the encrypted-only file size depend on the input file (e.g., abe vs.  moby_dick)? Why or why not? In other words, do the ratios
+
+gzip(E(abe))/E(abe)
+
+and
+
+gzip(E(moby_dick))/E(moby_dick)
+
+differ? If so, does it have to do with the input file? And why?
+
+A: gzip(E(abe))/E(abe)=(492/496)=.99 and gzip(E(moby_dick))/E(moby_dick)=(768/1228)=0.63. The ratios are different. abe has the ratio of .99 and moby has the ratio of .63. It does have to do with the input file because the key does not change the file size but the input file does. 
