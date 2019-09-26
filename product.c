@@ -227,17 +227,16 @@ if(MODE == ENCODE) {
           ++rbuf_index;
           --bytesleft;
   if(rbuf_index == bufsize) {
-  for(int i = 0; i < rounds; ++i) {
+  for(int i = 0; i < rounds; i++) {
     vigenere_buffer(read_buf, key, maxkey, 1);
     num= transpose_buffer(read_buf, read_buf, dim);
   }
-
     num= dump_buffer(read_buf, bufsize, rbuf_index, OUTPUT);
     rbuf_index = 0;
   }
   }
   num=pad_buffer(read_buf, bufsize, rbuf_index);
-  for(int i = 0; i < rounds; ++i) {
+  for(int i = 0; i < rounds; i++) {
         vigenere_buffer(read_buf, key, maxkey, 1);
         num=transpose_buffer(read_buf, read_buf, dim);
   }
@@ -252,14 +251,14 @@ if(MODE == DECODE) {
     --bytesleft;
     if(rbuf_index == bufsize) {
       if(bytesleft == 0) {
-        for(int i = 0; i < rounds; ++i) {
+        for(int i = 0; i < rounds; i++) {
           num=transpose_buffer(read_buf, read_buf, dim);
           vigenere_buffer(read_buf, key, maxkey, 0);
         }
       num=dump_buffer(read_buf, unpad_buffer(read_buf, bufsize), rbuf_index, OUTPUT);
       } 
       else {
-        for(int i = 0; i < rounds; ++i) {
+        for(int i = 0; i < rounds; i++) {
           num=transpose_buffer(read_buf, read_buf, dim);
           vigenere_buffer(read_buf, key, maxkey, 0);
         }
